@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/css/foundation.css">
+    <link rel="stylesheet" href="../../public/css/app.css">
+    <link rel="stylesheet" href="../../public/css/FormularioEmpleado.css">
+    <title>Formulario</title>
+
+    <style>
+      body{
+        margin: 0;
+        
+      }
+      header{
+          display: flex;
+          height:100px;
+          background-color: #a26aab; /* Fondo azul pastel */
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          justify-content:space-between;
+          align-items:center;
+          padding: 10px;
+        }
+        body{
+          font-family: fantasy;
+          
+        }
+        .logo{
+          display: flex;
+          align-items:center;
+        }
+        a {
+          text-decoration:none;
+          list-style: none;
+          color:black;
+        }
+        ul{
+          list-style:none;
+        }
+        .logo img{
+          height:200px;
+          
+        }
+        ul, ol {
+				list-style:none;
+       
+			}
+			
+      .nav{
+        width: 500px;
+        margin: 0 auto; 
+      }
+			
+      
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:rgb(114, 67, 116);
+				color:#fbecf2;
+				text-decoration:none;
+				padding:8px 10px;
+				display:block;
+        font-size: 25px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-right:10px;
+        margin-bottom:5px;
+			}
+			
+			.nav li a:hover {
+				background-color:#ae73a1;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+       
+       
+			}
+			
+			 .nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+       
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+      }
+    </style>
+  
+
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="../../public/img/log.png" >
+      
+    </div>
+    <nav>
+    <div id="header">
+    <nav> <!-- Aqui estamos iniciando la nueva etiqueta nav -->
+      <ul class="nav">
+        <li><a class="active" href="">Empleado</a>
+          <ul>
+            <li><a href="formularioEmpleado.html">Ingresar Empleado</a></li>
+            <li><a href="formularioActualizar.html">Actualizar Empleado</a></li>
+            <li><a href="formularioEliminar.html">Eliminar Empleado</a></li>
+          </ul>
+        </li>
+        <li><a href="nomina.html">Nomina</a>
+         
+        </li>
+        <li><a href="gestionAdministrativo.html">Administraciones</a>
+          <ul>
+            <li><a href="formularioBonificacion.html">Bonificación</a></li>
+        </ul>
+        </li>
+
+      </ul>
+    </nav><!-- Aqui estamos cerrando la nueva etiqueta nav -->
+  </div>
+
+    </nav>
+  </header>
+            <div class="containerX">
+                <div class="callout">
+                    <h1 style="text-align: center;">Bonificación</h1>
+                    <form action="../controllers/gestion_bonus.php" method="post" required="required" name="form1">
+                        <div class="form-row">
+                            <div class="form-column">
+                                <label>Tipo Bonificación
+                                    <input type="text" class="cel" id="tipoBoni" name="tipoBoni" placeholder="Tipo Bonificación" required>
+                                </label>
+                            </div>
+                            <div class="form-column">
+                                <label>Valor Bono
+                                    <input type="text" class="cel" name="valorBono" placeholder="Valor Bono" required>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="cell">
+                                <input type="submit" class="success button" value="Registrar">
+                                <input type="reset" class="alert button" value="Limpiar">
+                                <input type="submit" class="button" onclick="location.href='../views/index.html'" value="Atras">
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+    
+</body>
+</html>
+
